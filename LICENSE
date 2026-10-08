@@ -1,0 +1,31 @@
+MIT License
+
+Copyright (c) 2026 NLP Digital Transformation Measurement Project
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+---
+
+说明：
+- code/ 与 docs/ 下的代码与文档以 MIT 协议发布。
+- data/ 目录中的数据由 code/00_generate_demo_data.py 程序生成，为仿真数据，
+  不含任何真实企业信息，可自由使用与分发。
+- data/lexicon/ 中的种子词典与停用词表为人工整理，用于学术研究目的。
+- 若使用者以真实年报与财务数据替换 data/ 目录内容，须自行遵守数据提供方的
+  许可协议与相关法律法规，不得二次分发受限数据。

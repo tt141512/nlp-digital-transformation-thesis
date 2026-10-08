@@ -1,0 +1,23 @@
+# 运行环境依赖
+# 安装：  pip install -r requirements.txt
+#
+# 设计原则：依赖最小化。核心流水线只依赖 pandas / numpy / jieba / matplotlib。
+#   - 词向量扩展：由 numpy 上的 PPMI + 截断 SVD 实现（code/03_build_lexicon.py），
+#     不使用 gensim / torch，也不需要外部预训练语料。
+#   - 面板双向固定效应、2SLS、Logit-IRLS（用于倾向得分匹配）：
+#     全部由 code/utils.py 自行实现。
+#   - Student-t 双侧 p 值、Spearman / Pearson 相关：纯 Python 实现，不依赖 scipy。
+
+pandas>=2.0
+numpy>=1.24
+jieba>=0.42.1
+matplotlib>=3.7          # 仅用于生成 results/figures 中的图表；缺失时脚本自动跳过作图
+python-docx>=1.1         # 仅用于 build_docx.py 导出 Word 版论文；可缺省
+tabulate>=0.9            # 仅用于把结果表输出为 Markdown；缺失时自动降级为纯文本表
+
+# ---------------------------------------------------------------------------
+# 可选（非必需）：
+#   scipy / statsmodels / gensim
+#   - scipy / statsmodels 不再是必需项：相关统计功能已在 code/utils.py 内自行实现；
+#   - 若已安装 gensim，code/03_build_lexicon.py 会额外输出一份 Word2Vec 复核表。
+# ---------------------------------------------------------------------------

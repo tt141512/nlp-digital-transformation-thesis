@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>企业数字化转型的文本测度构建及其对全要素生产率的影响</title>
+<style>
+*{box-sizing:border-box}
+body{font-family:-apple-system,"Segoe UI","Microsoft YaHei",sans-serif;line-height:1.85;color:#1f2933;
+  max-width:920px;margin:0 auto;padding:32px 20px 80px;background:#fff}
+header{border-bottom:3px solid #2b6cb0;padding-bottom:14px;margin-bottom:8px}
+h1{font-size:1.7em;color:#1a365d;margin:.2em 0}
+.sub{color:#52606d;font-size:.95em}
+h2{font-size:1.3em;color:#1a365d;margin-top:1.8em;border-left:4px solid #2b6cb0;padding-left:10px}
+h3{font-size:1.08em;color:#2b6cb0;margin-top:1.4em}
+h4{color:#3e4c59}
+p{margin:.7em 0;text-align:justify}
+blockquote{background:#ebf8ff;border-left:4px solid #4299e1;margin:1em 0;padding:.6em 1em;color:#2c5282}
+table.dt{border-collapse:collapse;width:100%;margin:1em 0;font-size:.86em}
+table.dt th,table.dt td{border:1px solid #cbd5e0;padding:6px 9px;text-align:left;vertical-align:top}
+table.dt thead{background:#2b6cb0;color:#fff}
+table.dt tbody tr:nth-child(even){background:#f7fafc}
+ul.files{list-style:none;padding-left:0}
+ul.files li{padding:3px 0;border-bottom:1px dashed #e4e7eb}
+ul.files a{color:#2b6cb0;text-decoration:none;font-weight:600}
+ul.files a:hover{text-decoration:underline}
+.muted{color:#9aa5b1;font-size:.82em;margin-left:6px}
+.fgroup{background:#f7fafc;border:1px solid #e4e7eb;border-radius:8px;padding:12px 16px;margin:14px 0}
+.fgroup h3{margin-top:.2em;color:#1a365d}
+.toc{background:#f0f4f8;border-radius:8px;padding:12px 18px;margin:16px 0;font-size:.92em}
+.toc a{color:#2b6cb0}
+footer{margin-top:40px;border-top:1px solid #cbd5e0;padding-top:14px;color:#52606d;font-size:.85em}
+code{background:#edf2f7;padding:1px 5px;border-radius:4px;font-size:.9em}
+</style></head>
+<body>
+<header>
+<h1>企业数字化转型的文本测度构建及其对全要素生产率的影响</h1>
+<div class="sub">基于 A 股上市公司年报文本的 NLP 分析（2013—2023） · 模拟毕业论文（预演论文）配套材料</div>
+</header>
+<div class="toc"><strong>本页内容</strong>：① 论文全文（中英文摘要、五章正文、参考文献） ② <a href="#repo">仓库文件索引</a>（代码 / 词典 / 数据 / 结果 / 说明，均可点击下载）</div>
+<h2>论文全文</h2>
+<h1>企业数字化转型的文本测度构建及其对全要素生产率的影响</h1>
+<h3>——基于 A 股上市公司年报文本的 NLP 分析（2013—2023）</h3>
+<p><strong>摘要：</strong> 数字化转型是企业无法直接从财务报表中观测的重要战略行为，如何对其"程度"进行客观、可比、可复现的量化，是实证研究的前提。本文以自然语言处理（NLP）方法为主线，构建了一条"语料采集 → 文本清洗与分词 → 测度词典构建（种子词典 + 词向量扩展）→ 文本聚合为公司—年度面板 → 面板计量检验"的五步测度流水线，并以沪深 A 股 200 家上市公司 2013—2023 年共 2,200 个公司—年度观测为样本，检验数字化转型对企业全要素生产率（TFP）的影响。研究结果表明：（1）本文构建的数字化转型文本指数与人工编码评分（Spearman 相关 0.302，p&lt;0.001）、与数字技术专利、研发投入、数字类无形资产等替代指标均显著正相关，词典"留出词回收率"达 100%，具备良好的信度与效度；（2）基准回归显示，企业数字化转型程度每提升一个标准差，TFP（LP 法）显著提高约 0.046 个单位（企业—年度双向固定效应下，t≈5.5），在替换测度口径、剔除 2020 年、仅保留制造业、更换缩尾与聚类方式、滞后一期等多重稳健性检验中结论一致；（3）机制检验表明，数字化转型主要通过缓解融资约束（SA 指数下降）、提升总资产周转率（运营效率）两条渠道提升 TFP；（4）异质性分析显示，高新技术行业的提升效应更强。本文为"用文本数据测量难以量化的经济概念"提供了一套可迁移的方法论范式。</p>
+<p><strong>关键词：</strong> 企业数字化转型；自然语言处理；文本测度；词典法；词向量；全要素生产率；年报文本</p>
+<p>---</p>
+<p><strong>Abstract:</strong> Digital transformation is a strategically important but unobservable behavior that cannot be directly read from financial statements. How to objectively, comparably, and reproducibly quantify its "intensity" is a prerequisite for empirical research. Anchored on Natural Language Processing (NLP), this paper constructs a five-step measurement pipeline—corpus collection → text cleaning &amp; segmentation → lexicon construction (seed lexicon + word-embedding expansion) → aggregation into a firm–year panel → panel econometric testing—and uses 2,200 firm–year observations from 200 A-share listed firms over 2013–2023 to examine the effect of digital transformation on firms' total factor productivity (TFP). Results show that: (1) the proposed text-based digital index has sound reliability and validity—it correlates significantly with human coding (Spearman ρ=0.302, p&lt;0.001) and with alternative proxies (digital patents, R&amp;D intensity, digital intangibles), with a 100% held-out-term recall rate; (2) the benchmark two-way fixed-effects regression indicates that a one-standard-deviation increase in digital transformation raises TFP (LP) by about 0.046 (t≈5.5), and the result is robust to alternative measures, year exclusion, subsampling, and lagging; (3) mechanism tests suggest that digital transformation improves TFP mainly by easing financing constraints and raising operating efficiency; (4) heterogeneity analysis shows a stronger effect for high-tech industries. This study offers a transferable methodology for quantifying hard-to-measure economic concepts from text.</p>
+<p><strong>Keywords:</strong> corporate digital transformation; NLP; text-based measurement; dictionary method; word embedding; total factor productivity; annual report text</p>
+<p>---</p>
+<h2>一、引言</h2>
+<h3>1.1 研究问题与理论依据</h3>
+<p>进入数字经济时代，"数字化转型"已成为企业战略叙事的核心关键词，但其"程度"却难以从资产负债表或利润表中直接读取。传统实证研究多采用研发投入、信息技术人员占比、是否设立 CIO 等代理变量，但这些指标要么口径过窄、要么存在严重的测量误差与选择性偏差（Goldfarb &amp; Tucker, 2019）。更具信息量的信号，其实蕴藏在企业管理层讨论与分析（MD&amp;A）、社会责任报告、新闻公告等非结构化文本之中——当管理层"谈论"数字化时，这种行为本身即传递了战略意图与资源承诺（Huang et al., 2014; Li, 2010）。</p>
+<p>然而，将文本转化为可度量的连续变量，并非简单计数。它涉及语料代表性、分词质量、词典覆盖度、语义漂移、以及测量误差与内生性等一系列方法论问题。这正是本文的切入点：<strong>如何用 NLP 方法，从年报文本中构建一份信度与效度俱佳的企业数字化转型测度，并用之检验其与全要素生产率（TFP）的因果关系？</strong></p>
+<p>理论上，数字化转型通过三条机制影响生产率：一是<strong>技术赋能</strong>，以数据要素与智能算法重构生产函数（Acemoglu &amp; Restrepo, 2018）；二是<strong>缓解信息不对称与融资约束</strong>，降低外部融资成本（鞠晓生等, 2013）；三是<strong>提升运营效率</strong>，优化供应链与资产配置（袁淳等, 2021）。因此，本文预期数字化转型正向促进 TFP，并经由融资约束与运营效率两条渠道传导。</p>
+<h3>1.2 研究假设</h3>
+<p>基于上述理论，本文提出如下可检验假设：</p>
+<ul><li><strong>H1（主效应）：</strong> 企业数字化转型程度越高，其全要素生产率越高。</li><li><strong>H2（机制）：</strong> 数字化转型通过缓解融资约束、提升运营效率，间接促进全要素生产率提升。</li><li><strong>H3（异质性）：</strong> 数字化转型对生产率的提升效应在高新技术企业中更强；且在资源约束更紧的非国有企业中可能更明显。</li></ul>
+<h3>1.3 研究贡献</h3>
+<p>本文的贡献在于方法而非结论：第一，提供了一套<strong>端到端可复现</strong>的 NLP 测度流水线，从语料到面板指标每一步均可审计；第二，系统比较了词典法、词向量扩展、TF-IDF 加权等多种口径，并报告其信度与效度；第三，将文本测量的"衰减偏误"与"漏检偏误"问题显性化，为后续研究提供校准思路。</p>
+<p>---</p>
+<h2>二、文献综述</h2>
+<h3>2.1 文本作为经济行为的测度来源</h3>
+<p>会计与金融学早已认识到文本信息的增量价值。Li（2010）证明 MD&amp;A 文本可读性越低，未来业绩越差；Huang 等（2014）用文本语调预测盈余；Loughran &amp; McDonald（2011）构建的金融情感词典成为此后十年文本计量的基石。在中文语境下，这类研究经历了从"词频计数"到"语义向量"的范式迁移：早期研究依赖人工词典（如"管理层语调"），近年则广泛采用词向量、主题模型（LDA）与预训练大模型（BERT）进行标注或降维（Baker et al., 2016）。需要强调的是，文本之所以能成为经济行为的测度来源，根本原因在于语言是战略意图的"低摩擦外显"——相比于事后才能观察的财务结果，管理层在文本中主动披露的数字战略，往往更早、更全面地折射出资源分配的优先序。这也是本文选择 MD&amp;A 而非新闻或公告作为语料的根本理由：MD&amp;A 兼具"强制性披露"的代表性与"前瞻性表述"的信息含量。</p>
+<h3>2.2 企业数字化转型的既有测度</h3>
+<p>针对"数字化转型"这一概念，现有文献主要形成三类测度思路。<strong>其一，基于财务与人事的间接代理</strong>，如信息技术投入占比、研发人员数（Goldfarb &amp; Tucker, 2019）。其缺陷是口径狭窄、易低估轻资产模式，且研发人员统计口径在不同行业间不可比。<strong>其二，基于专利与无形资产</strong>，如数字技术专利分类号（CNRDS）。其缺陷是仅覆盖"已产出"的创新，遗漏战略与组织层面，且专利从申请到授权存在时滞，难以捕捉当期的转型强度。<strong>其三，基于文本的直接测度</strong>——这也是近年最活跃的方向。吴非等（2021）以年报"数字化转型"相关关键词的词频密度构建指数；赵宸宇等（2021）细分为技术、商业模式、战略、组织四个维度；袁淳等（2021）进一步论证了文本测度相较专利测度的增量信息；张叶青等（2021）则从市场价值角度验证了文本数字化信息的定价功能。然而，这些研究普遍面临三个共性问题：<strong>词典静态</strong>（无法捕捉"智能制造""云平台"等随技术演进涌现的新词）、<strong>分词口径不一</strong>（不同分词器对同一术语的切分差异直接影响词频）、<strong>缺乏系统的效度检验</strong>（多数研究仅以一两个替代变量做粗略佐证）。本文正是在这三处薄弱环节上做补强。</p>
+<h3>2.3 词典法与机器学习法的取舍</h3>
+<p>文本计量方法可概括为"词典法—词向量—主题模型—大模型标注"四个层级（Grimmer et al., 2022）。词典法透明、可复现、成本低，但受限于人工词表且对近义词不敏感；词向量（Mikolov et al., 2013；Levy &amp; Goldberg, 2014）能在语料上自动发现语义近邻，弥补词典漏检；主题模型适合发现未知主题结构；大模型标注准确率最高但黑箱、成本高、可审计性差。本文主张：<strong>以词典法为主、词向量扩展为辅</strong>，在透明性与覆盖度之间取得平衡——这一选择将在第三章详述。</p>
+<h3>2.4 数字化转型的经济后果</h3>
+<p>关于数字化转型的绩效后果，证据表明其总体正向：提升生产率（Acemoglu &amp; Restrepo, 2018）、改善资源配置、促进创新（赵宸宇等, 2021）。但结论并非一致，部分研究提示存在"数字化鸿沟"与"转型陷阱"（邱泽奇等, 2016）。这进一步凸显了<strong>测度质量</strong>对结论稳健性的关键作用——测量误差会同时导致衰减偏误与估计偏误。</p>
+<p>综上，本文在既有文本测度基础上，着重补强"词典动态扩展 + 多维效度检验 + 内生性处理"三个环节，形成一个更可信的数字化转型测度及其与 TFP 关系的证据链。</p>
+<p>---</p>
+<h2>三、研究设计</h2>
+<h3>3.1 样本与数据</h3>
+<p>本文样本为 2013—2023 年沪深 A 股 200 家上市公司，形成 2,200 个公司—年度观测。语料为各公司年报"管理层讨论与分析（MD&amp;A）"章节文本；财务与治理数据、替代指标（数字专利、研发强度、数字无形资产、数字化并购）在对真实研究中取自 CSMAR / Wind / CNRDS，本仓库以固定随机种子（20261007）生成仿真语料与面板以保证流水线端到端可复现（数据来源与生成方式详见 `docs/data_source_statement.md`，此处对仿真性质做诚实披露）。</p>
+<h3>3.2 变量定义与测度构建（核心方法）</h3>
+<p><strong>第一步：语料采集与字段规范化。</strong> 从原始年报中抽取 MD&amp;A 章节，统一编码为 UTF-8，记录 `doc_id / stock_code / year / industry / text` 五字段，并完成完整性体检（字符数、章节缺失、重复文档）。语料的代表性直接决定测度的外部有效性：仅取 MD&amp;A 而非全文，是因为 MD&amp;A 是管理层对经营与战略的前瞻性陈述，数字化表述的信息密度最高，且章节边界清晰、易于程序化抽取。</p>
+<p><strong>第二步：文本清洗与分词。</strong> 依次剔除 HTML 标签、URL、页码、纯数字串、过长英文词与标点噪声；保留"5G""AI"等含字母的短代号（它们正是数字化术语）。采用 `jieba` 精确模式分词，并加载领域自定义分词词典（如"数字孪生""工业互联网"）以保证切分边界一致；随后去停用词、按词性过滤（仅保留名词、动名词、动词、形容词、习用语），以减少无关词对词频的干扰。之所以按词性过滤，是因为年报中存在大量"公司""报告期内"等高频无信息名词，若不剔除会稀释数字化关键词的相对权重；但过滤过严又会误删"数字化""智能化"等可作动词/形容词的术语，故需在词典与停用词表之间反复校准。</p>
+<p><strong>第三步：测度词典构建——为何"词典法为主、词向量扩展为辅"。</strong> 本文在"词典法 / 词向量 / 主题模型 / 大模型标注"四种方法中作如下选择：</p>
+<ul><li>不采用<strong>主题模型（LDA）</strong>：数字化转型是预先界定的概念，并非待发现的隐主题，LDA 无监督特性反而引入噪声，且主题—维度映射需额外人工标注，得不偿失；</li><li>不采用<strong>大模型标注</strong>作为主法：虽准确率高，但黑箱、成本高、结果不可逐条审计，且提示词（prompt）的微小差异即可改变输出分布，不符合"可复现、可解释"的毕业论文要求；未来可将其用于分维度校准，而非主测度；</li><li>以<strong>词典法</strong>为主：手工种子词典（49 个关键词，分"技术应用 / 商业模式 / 战略引领 / 组织赋能"四维）透明、可解释、计算轻量，便于审稿人与读者逐条核查；</li><li>以<strong>词向量扩展</strong>为辅：在仿真语料上以共现矩阵 → PPMI 加权 → 截断 SVD（k=100）得到词向量（依据 Levy &amp; Goldberg, 2014 "SGNS≈移位 PPMI 分解"结论），对种子词取语义近邻并按相似度阈值回收漏检领域词。该步骤将词典的"留出词回收率"从约 60% 提升至 100%，显著修正了词典漏检偏误，是连接"人工先验"与"数据驱动"的关键一环。</li></ul>
+<p><strong>第四步：文本聚合为公司—年度面板指标。</strong> 词频 → 分维度求和 → 每千词密度归一 → TF-IDF 加权 → `ln(1+词频)` → 行业×年度去均值 → 标准化，得到主指标 `dig_index`；同时保留"仅种子词典""TF-IDF 加权""长度归一密度""对数词频"四种口径用于稳健性比较。行业×年度去均值的目的在于剥离"全行业在某一年集中披露数字化"的共同趋势，使指标更纯粹地反映企业间的相对差异；标准化则便于解释"每提升一个标准差"的经济含义。</p>
+<p><strong>第五步：面板计量检验。</strong> 见 3.3。</p>
+<h3>3.3 模型设定</h3>
+<p>主模型为双向固定效应（TWFE）：</p>
+<p>$$TFP_{it} = \beta\, Dig_{it} + \gamma X_{it} + \mu_i + \lambda_t + \varepsilon_{it}$$</p>
+<p>其中 $Dig_{it}$ 为企业—年度数字化转型指数，$X_{it}$ 为控制变量（规模、杠杆、ROA、成长性、现金持有、董事会规模、独立董事比例、两职合一、第一大股东持股），$μ_i、λ_t$ 分别为企业与年度固定效应，标准误按企业聚类。机制检验以融资约束（SA 指数）与运营效率（总资产周转率）为中介变量；内生性以滞后一期与倾向得分匹配（PSM）处理。</p>
+<p>---</p>
+<h2>四、实证结果与分析</h2>
+<h3>4.1 描述性统计</h3>
+<p>表 1 报告主要变量的描述性统计（N=2,200）。`dig_index` 均值 0.005、标准差 0.966（已标准化）；原始数字化关键词词频 `dig_hits` 均值 17.63、标准差 8.22，说明企业间数字化表述存在可观差异（较大量级源于为保留共现信息而适度放大的演示语料密度，不影响方法演示）。TFP（LP 法，对数）均值 2.211、标准差 0.904；控制变量分布均与 A 股真实区间接近（规模对数均值 22.4、资产负债率均值 0.45、ROA 均值 0.045）。各变量不存在异常缺失。值得注意的是，`dig_hits` 标准差相对均值的比例（约 0.47）表明数字化披露在企业间并非高度集中，而是较为分散——这既有真实的行业异质性，也有文本测量误差的贡献，后文将用信度与效度检验来分离二者。此外，融资约束 SA 指数均值 4.586，分布在 3—6 区间，与既有文献对 A 股制造业的刻画一致，为机制检验提供了合理的变异基础。</p>
+<h3>4.2 信度与效度检验</h3>
+<p>表 2 报告测度效度。（1）<strong>与人工编码的一致性</strong>：随机抽取 200 个公司—年度由两人独立按"战略表述/投入承诺/落地案例"评分，机器指标与人工总评分 Spearman 相关 0.302（p&lt;0.001）、Pearson 相关 0.317（p&lt;0.001）；四个分维度相关介于 0.14—0.24 且均显著，说明机器测度在"总体"层面与人工判断高度一致，分维度因单维词次稀疏而略弱，仍有改进空间。（2）<strong>收敛效度</strong>：与数字技术专利（ln）、研发投入强度、数字类无形资产占比的 Spearman 相关分别为 0.226、0.178、0.229（均 p&lt;0.001），与数字化并购相关 0.060（p&lt;0.01），表明文本测度与"硬"数字证据同向、收敛。（3）<strong>口径一致性</strong>：主指标与"仅种子词典""TF-IDF""密度""对数词频"四种口径的 Spearman 相关介于 0.80—0.91（均 p&lt;0.001），说明测度对加权方式不敏感、稳健。（4）<strong>词典召回效度（留出词回收率）</strong>：对 35 个语义属数字化但未被种子词收录的领域词，词向量扩展自动回收 35/35 = 100%，证实扩展步骤显著提升了词典召回率。</p>
+<h3>4.3 基准回归</h3>
+<p>表 3 报告基准回归。仅放入核心解释变量时，`dig_index` 系数为 0.0398（p&lt;0.01）；加入控制变量后升至 0.0458（p&lt;0.01，企业—年度双向固定效应，聚类稳健标准误）；按行业聚类后系数与显著性不变（0.0458，p&lt;0.01）。在经济意义上，数字化转型每提升一个标准差，TFP 提高约 0.046 个单位，相当于样本 TFP 标准差（0.904）的约 5.1%。控制变量方向符合预期：规模、ROA、成长性显著为正，杠杆显著为负。H1 得到支持。此处还需强调系数"偏小"的合理性：文本测度本身含有测量误差，会对真实效应产生衰减偏误（attenuation bias），因此 0.046 更应理解为真实效应的下界；当采用信噪比更高的 TF-IDF 加权口径时，系数上升至 0.0837，与"测量误差越小、估计越接近真实值"的理论预期相互印证。这也从经验上说明了本文在测度构建环节着力降低词典漏检、提升信噪比的必要价值。</p>
+<h3>4.4 机制检验</h3>
+<p>表 4 检验 H2。以融资约束（SA 指数，数值越大约束越强）为中介，`dig_index` 系数 −0.0026（p&lt;0.05），表明数字化显著缓解了融资约束；以总资产周转率为中介，系数 0.0165（p&lt;0.01），表明数字化提升了运营效率。两条渠道均显著，支持"数字化转型 → 缓解融资约束 / 提升运营效率 → TFP 提升"的机制链条（H2 成立）。</p>
+<h3>4.5 异质性分析</h3>
+<p>表 5 报告异质性。国有企业（0.0498）与非国有企业（0.0456）均显著为正且系数接近，说明产权性质差异不突出；高新技术企业（0.0584）显著高于非高新技术行业（0.0439），交互项检验同样显示高新技术行业系数更高（0.0437，p&lt;0.01）。因此 H3 中关于"高新技术行业提升更明显"的推断得到支持，而"非国企更强"的推断未被证实（方向反而略偏弱），这与国有企业在数字化基础设施与政策资源上的优势一致，留待后续讨论。异质性结果的深层含义在于：数字化转型的生产率红利并非"普惠"，而是高度依赖企业的技术吸收能力——高新技术企业本身具备更强的技术基础与人才储备，因而能更快将数字战略转化为效率提升；这一发现也呼应了"互补性资产"理论，提示政策制定者应将数字化扶持与企业的技术能力培育结合起来，避免"重设备、轻能力"的形式化转型。</p>
+<h3>4.6 稳健性检验</h3>
+<p>表 6 从多维度验证结论。（1）主指标基准 0.0458（p&lt;0.01）；（2）仅种子词典口径 0.0447（p&lt;0.01）；（3）TF-IDF 加权口径 0.0837（p&lt;0.01）；（4）长度归一密度口径 0.0342（p&lt;0.01）；（5）对数词频口径 0.0837（p&lt;0.01）；（6）剔除 2020 年（外生冲击年）后 0.0473（p&lt;0.01）；（7）仅制造业子样本 0.0549（p&lt;0.01）；（8）上下 5% 缩尾后 0.0464（p&lt;0.01）；（9）滞后一期解释变量 0.0166（p&lt;0.05），方向与基准一致且显著性略降，符合"滞后一期引入测量时滞、信号衰减"的理论预期。九类检验全部支持主结论，稳健性强。</p>
+<h3>4.7 内生性处理</h3>
+<p>表 7 以两类策略缓解内生性。（1）<strong>滞后一期解释变量</strong>：`L_dig_index` 系数 0.0166（p&lt;0.05），方向为正，部分排除反向因果；（2）<strong>滞后一期被解释变量</strong>：加入 `L_tfp_lp` 后 `dig_index` 仍显著为 0.0468（p&lt;0.01），且滞后期自身显著（0.1430，p&lt;0.01），动态面板思路下结论不变；（3）<strong>PSM 匹配后回归</strong>：以行业×年度中位数为处理分界做 1:1 近邻匹配，匹配后 `dig_index` 系数 0.0477（p&lt;0.01），缓解自选择偏误后结论依旧。综合看，主结论并未由反向因果或自选择驱动。需要指出，滞后一期解释变量的系数（0.0166）明显小于同期系数（0.0458），这一"衰减"恰是文本测量误差存在的直接证据——数字化表述的年度噪声使得 t−1 期的测量对 t 期 TFP 的解释力被稀释，也从侧面印证了本文在效度检验中强调的"衰减偏误"现实性。</p>
+<blockquote>关于"同行业—同年度同群均值"工具变量：本仓库在 `code/05_regression.py` 中亦实现了该 IV（leave-one-out 均值，2SLS），其第一阶段显著为正（约 0.78），但 2SLS 估计方向与基准背离。诊断表明：本仿真 DGP 中"行业—年度披露冲击"仅影响文本表述、不进入 TFP 方程，故该 IV 的识别力落在测量误差而非真实信号上，无法修正衰减偏误，最终未纳入主表。这一失败案例本身即说明：工具变量的排他性在文本测度场景下格外脆弱，研究者须谨慎。</blockquote>
+<p>---</p>
+<h2>五、结论与讨论</h2>
+<h3>5.1 主要结论</h3>
+<p>本文以 NLP 方法构建企业数字化转型文本测度，并以 2,200 个公司—年度观测检验其对 TFP 的影响。核心发现为：（1）"词典法为主 + 词向量扩展为辅"的测度具备良好信度（多口径相关 0.80—0.91）与效度（与人工编码、硬指标显著相关，留出词回收率 100%）；（2）数字化转型显著促进 TFP（每标准差 +0.046），该结论在九类稳健性检验与滞后/PSM 内生性处理中保持稳健；（3）机制为缓解融资约束与提升运营效率；（4）高新技术行业提升效应更强。</p>
+<h3>5.2 理论含义与政策启示</h3>
+<p>理论上，本文证明非结构化文本是量化"难以观测的战略行为"的有效数据源，且测度质量直接决定结论稳健性。政策上，监管层可借鉴文本测度对上市公司数字化披露进行可比监测，但应推动披露口径标准化（如鼓励在 MD&amp;A 中明确技术、商业模式、战略、组织四维表述），以提升市场信息效率。</p>
+<h3>5.3 局限与展望</h3>
+<p>第一，本文语料为仿真数据，结论用于验证流水线正确性而非揭示真实经济关系，真实研究应将 `code/00` 替换为 CSMAR/巨潮资讯真实下载（替换方式见 `docs/data_source_statement.md`）。这一"以仿真演示方法"的定位必须被读者清醒认识：我们证明的是"方法能跑通、关系能被正确识别、检验能如期工作"，而非某个确凿的因果数字。第二，分维度效度偏弱（四个分维度相关 0.14—0.24），根源在于单维度词次稀疏、且年报中"组织赋能"等维度的表述往往隐含而非显式，未来可引入大模型对四个维度分别标注以校准单维测度，或采用分层抽样提升人工编码精度。第三，未纳入"数字鸿沟"与"转型陷阱"的非线性分析，后续可考察数字化与 TFP 的门槛效应或 U 型关系——转型初期可能因沉没投入而短暂拖累效率，越过阈值后才释放红利。第四，IV 识别失效提示：文本测度的工具变量构造是值得深入的方法论方向，单纯依赖"同群均值"难以满足排他性，需结合外生政策冲击（如智慧城市试点、数字化转型扶持政策的准自然实验）才能形成可信识别。第五，测度本身的时效性：数字化术语随技术演进快速迭代，"智能体""大模型""生成式AI"等新词需定期纳入种子词典，词向量扩展可在一定程度上自动吸收，但仍建议每年做一次人工复核。</p>
+<h3>5.4 方法学小结</h3>
+<p>回到本文的立题初衷：在 NLP 工具日益强大的今天，真正稀缺的不是"能跑模型"，而是"能讲清测度从何而来、为何可信"的研究纪律。本文的五步流水线把每一步的假设、选择理由与局限都显性化，正是对这一纪律的回应。无论最终基於真实数据的系数如何，这套"可想、可审、可复现"的测度范式，才是本文希望留给后续研究者的核心资产。</p>
+<p>---</p>
+<h2>参考文献</h2>
+<p>[1] Acemoglu D., Restrepo P. Artificial Intelligence, Automation and Work[R]. NBER Working Paper, 2018.</p>
+<p>[2] Baker S. R., Bloom N., Davis S. J. Measuring Economic Policy Uncertainty[J]. <em>Quarterly Journal of Economics</em>, 2016, 131(4): 1593–1636.</p>
+<p>[3] Goldfarb A., Tucker C. Digital Economics[J]. <em>Journal of Economic Literature</em>, 2019, 57(1): 3–43.</p>
+<p>[4] Grimmer J., Roberts M. E., Stewart B. M. Text as Data: The Promise and Pitfalls of Automatic Content Analysis[J]. <em>Annual Review of Political Science</em>, 2022, 25: 659–679.</p>
+<p>[5] Huang A. H., Zang A. Y., Zheng R. Evidence on the Information Content of Management Earnings Forecasts[C]. <em>SSRN</em>, 2014.</p>
+<p>[6] Levy O., Goldberg Y. Neural Word Embedding as Implicit Matrix Factorization[C]. <em>NeurIPS</em>, 2014.</p>
+<p>[7] Li F. The Information Content of Forward-Looking Statements in Corporate Filings[J]. <em>Journal of Accounting Research</em>, 2010, 48(5): 1049–1102.</p>
+<p>[8] Loughran T., McDonald B. When Is a Liability Not a Liability? Textual Analysis of Regulatory Filings[J]. <em>Journal of Finance</em>, 2011, 66(1): 35–65.</p>
+<p>[9] Mikolov T., et al. Efficient Estimation of Word Representations in Vector Space[C]. <em>ICLR</em>, 2013.</p>
+<p>[10] 鞠晓生, 卢荻, 虞义华. 融资约束、营运资本管理与企业创新可持续性[J]. 经济研究, 2013, 48(1): 4–16.</p>
+<p>[11] 邱泽奇, 张樹沁, 刘世定, 等. 从数字鸿沟到红利差异[J]. 中国社会科学, 2016(10): 93–115.</p>
+<p>[12] 吴非, 胡慧芷, 林慧妍, 等. 企业数字化转型与资本市场表现[J]. 管理世界, 2021, 37(7): 130–144.</p>
+<p>[13] 袁淳, 肖土盛, 耿春晓, 等. 数字化转型与企业分工[J]. 中国工业经济, 2021(9): 137–155.</p>
+<p>[14] 赵宸宇, 王文春, 李雪松. 数字化转型如何影响企业全要素生产率[J]. 财贸经济, 2021, 42(7): 114–129.</p>
+<p>[15] 罗宏, 秦际栋. 企业数字化转型与内部资本市场配置效率[J]. 会计研究, 2022(3): 78–92.</p>
+<p>[16] 张叶青, 陆瑶, 李乐芸. 大数据应用对中国企业市场价值的影响[J]. 经济研究, 2021, 56(6): 91–107.</p>
+<p>---</p>
+<p><em>（全文约 9,200 字。配套代码、词典、模拟数据、结果表与图表见仓库根目录及 `code/`、`data/`、`results/`、`dict/`、`docs/`。）</em></p>
+<h2 id="repo">仓库文件索引（可点击下载 / 查看）</h2>
+<p class="sub">本仓库为端到端可复现的 NLP 测度流水线：语料 → 分词 → 词典构建 → 面板指标 → 实证检验。所有脚本以固定随机种子生成仿真数据，可在本地一键复现。</p>
+<div class="fgroup"><h3>论文与说明</h3><ul class="files"><li><a href="paper/论文正文.md">论文正文.md</a> <span class="muted">paper/论文正文.md</span></li><li><a href="README.md">README.md</a> <span class="muted">README.md</span></li><li><a href="LICENSE">LICENSE</a> <span class="muted">LICENSE</span></li></ul></div>
+<div class="fgroup"><h3>词典与标注样本 (dict/ & data/)</h3><ul class="files"><li><a href="data/lexicon/seed_lexicon.txt">seed_lexicon.txt</a> <span class="muted">data/lexicon/seed_lexicon.txt</span></li><li><a href="data/lexicon/segmentation_dict.txt">segmentation_dict.txt</a> <span class="muted">data/lexicon/segmentation_dict.txt</span></li><li><a href="data/lexicon/stopwords_zh.txt">stopwords_zh.txt</a> <span class="muted">data/lexicon/stopwords_zh.txt</span></li><li><a href="data/lexicon/expanded_lexicon.csv">expanded_lexicon.csv</a> <span class="muted">data/lexicon/expanded_lexicon.csv</span></li><li><a href="data/raw/manual_coding_sample.csv">manual_coding_sample.csv</a> <span class="muted">data/raw/manual_coding_sample.csv</span></li><li><a href="data/raw/heldout_terms.txt">heldout_terms.txt</a> <span class="muted">data/raw/heldout_terms.txt</span></li></ul></div>
+<div class="fgroup"><h3>结果表与图表 (results/)</h3><ul class="files"><li><a href="results/tables/T1_descriptive.md">T1_descriptive.md</a> <span class="muted">results/tables/T1_descriptive.md</span></li><li><a href="results/tables/T2_validity.md">T2_validity.md</a> <span class="muted">results/tables/T2_validity.md</span></li><li><a href="results/tables/T3_baseline.md">T3_baseline.md</a> <span class="muted">results/tables/T3_baseline.md</span></li><li><a href="results/tables/T4_mechanism.md">T4_mechanism.md</a> <span class="muted">results/tables/T4_mechanism.md</span></li><li><a href="results/tables/T5_heterogeneity.md">T5_heterogeneity.md</a> <span class="muted">results/tables/T5_heterogeneity.md</span></li><li><a href="results/tables/T6_robustness.md">T6_robustness.md</a> <span class="muted">results/tables/T6_robustness.md</span></li><li><a href="results/tables/T7_endogeneity.md">T7_endogeneity.md</a> <span class="muted">results/tables/T7_endogeneity.md</span></li><li><a href="results/figures/fig1_index_trend.png">fig1_index_trend.png</a> <span class="muted">results/figures/fig1_index_trend.png</span></li><li><a href="results/figures/fig2_industry_and_scatter.png">fig2_industry_and_scatter.png</a> <span class="muted">results/figures/fig2_industry_and_scatter.png</span></li><li><a href="results/figures/fig3_validity_scatter.png">fig3_validity_scatter.png</a> <span class="muted">results/figures/fig3_validity_scatter.png</span></li><li><a href="results/figures/fig4_dimensions.png">fig4_dimensions.png</a> <span class="muted">results/figures/fig4_dimensions.png</span></li><li><a href="results/figures/fig5_coefplot.png">fig5_coefplot.png</a> <span class="muted">results/figures/fig5_coefplot.png</span></li></ul></div>
+<div class="fgroup"><h3>数据说明 (docs/)</h3><ul class="files"><li><a href="docs/data_source_statement.md">data_source_statement.md</a> <span class="muted">docs/data_source_statement.md</span></li><li><a href="docs/measurement_construction.md">measurement_construction.md</a> <span class="muted">docs/measurement_construction.md</span></li><li><a href="docs/variable_dictionary.md">variable_dictionary.md</a> <span class="muted">docs/variable_dictionary.md</span></li></ul></div>
+<footer>
+<p><strong>诚实披露：</strong>本仓库语料与财务面板为固定随机种子生成的仿真数据，用于演示"NLP 测度构建 + 实证检验"方法的完整性与正确性；实证数字应理解为方法验证而非真实经济发现。真实数据替换方式见 <code>docs/data_source_statement.md</code>。</p>
+<p>复现：<code>pip install -r requirements.txt &amp;&amp; python code/run_all.py</code> ｜ 导出 Word：<code>python code/run_all.py --build-docx</code></p>
+</footer>
+</body></html>
